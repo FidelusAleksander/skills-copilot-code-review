@@ -671,4 +671,87 @@ footer {
   text-align: center;
   padding: 15px;
   font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.08);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  transition: opacity 0.3s;
+}
+
+.announcement-item {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.announcement-item button {
+  margin-right: 8px;
+  font-size: 0.85em;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: var(--primary-light);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.announcement-item button:last-child {
+  margin-right: 0;
+}
+.announcement-item button:hover {
+  background: var(--primary);
+}
+
+#announcements-modal .modal-content {
+  max-width: 500px;
+  width: 95%;
+}
+
+#announcements-list {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#announcement-form .form-group {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#announcement-form label {
+  font-size: 0.9em;
+  margin-bottom: 2px;
+}
+
+#announcement-form input[type="text"],
+#announcement-form input[type="datetime-local"] {
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+#announcement-form button[type="submit"] {
+  background: var(--success);
+  color: white;
+  margin-right: 8px;
+}
+#announcement-form button[type="button"] {
+  background: var(--border);
+  color: var(--text-primary);
+}
+#announcement-form button[type="submit"]:hover {
+  background: var(--primary);
+}
+#announcement-form button[type="button"]:hover {
+  background: var(--primary-light);
+  color: white;
 }

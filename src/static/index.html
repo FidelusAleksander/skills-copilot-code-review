@@ -12,9 +12,7 @@
     />
   </head>
   <body>
-    <div class="announcement-banner">
-  📢 Activity registration is open until the end of the month. Don't lose your spot!
-    </div>
+  <div id="announcement-banner" class="announcement-banner hidden"></div>
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
@@ -27,9 +25,39 @@
           <div id="user-info" class="hidden">
             <span id="display-name"></span>
             <button id="logout-button">Logout</button>
+            <button id="manage-announcements-btn" class="icon-button hidden" aria-label="Manage Announcements">
+              <span class="user-icon">📢</span>
+              <span>Announcements</span>
+            </button>
           </div>
         </div>
       </div>
+    <!-- Announcements Management Modal -->
+    <div id="announcements-modal" class="modal hidden">
+      <div class="modal-content" style="max-width: 500px;">
+        <span class="close-announcements-modal">&times;</span>
+        <h3>Manage Announcements</h3>
+        <div id="announcements-list"></div>
+        <button id="add-announcement-btn" style="margin-top: 10px;">Add Announcement</button>
+        <form id="announcement-form" class="hidden" style="margin-top: 15px;">
+          <div class="form-group">
+            <label for="announcement-message">Message:</label>
+            <input type="text" id="announcement-message" required maxlength="200" />
+          </div>
+          <div class="form-group">
+            <label for="announcement-start">Start Date (optional):</label>
+            <input type="datetime-local" id="announcement-start" />
+          </div>
+          <div class="form-group">
+            <label for="announcement-expiration">Expiration Date:</label>
+            <input type="datetime-local" id="announcement-expiration" required />
+          </div>
+          <input type="hidden" id="announcement-id" />
+          <button type="submit">Save</button>
+          <button type="button" id="cancel-announcement-btn">Cancel</button>
+        </form>
+      </div>
+    </div>
     </header>
 
     <main>
