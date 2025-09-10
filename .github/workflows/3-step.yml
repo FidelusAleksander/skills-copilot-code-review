@@ -29,6 +29,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - run: echo "$FULL_CONTEXT"
+        env:
+          FULL_CONTEXT: ${{ toJSON(github) }}
 
       - name: Get response templates
         uses: actions/checkout@v4
